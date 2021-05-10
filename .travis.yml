@@ -1,0 +1,16 @@
+sudo: required
+services:
+  - docker
+
+script:
+  - docker build -t lbranca1961/node .
+  - docker images lbranca1961/node
+
+before_deploy:
+  - docker login -u lbranca1961 -p Nicas#2014
+
+deploy:
+  provider: script
+  script: docker push lbranca1961/node
+  on:
+    branch: master
