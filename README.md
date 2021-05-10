@@ -1,2 +1,2 @@
-# node-docker
+# node
 Simple node and express docker 
